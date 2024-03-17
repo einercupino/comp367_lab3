@@ -6,6 +6,10 @@ pipeline {
         DOCKER_HUB_CREDENTIALS_ID = 'einercupino'
     }
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
         stage('Check Out') {
             steps {
