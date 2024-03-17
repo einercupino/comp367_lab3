@@ -18,9 +18,9 @@ public class DemoApplication {
     public String greeting() {
         LocalTime now = LocalTime.now();
         if (now.isBefore(LocalTime.of(12, 0))) {
-            return "Good morning, Einer, Welcome to COMP367";
+            return "Good morning, Einer John, Welcome to COMP367";
         } else {
-            return "Good afternoon, Einer, Welcome to COMP367";
+            return "Good afternoon, Einer John, Welcome to COMP367";
         }
     }
 }
