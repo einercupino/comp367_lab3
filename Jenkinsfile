@@ -25,7 +25,14 @@ pipeline {
 
         stage('Code Coverage') {
             steps {
-                sh 'mvn jacoco:report'
+                tool 'Maven'
+                bat 'mvn test jacoco:report'
+            }
+
+            post {
+                always {
+                    jacoco execPattern: '**/target/jacoco.exec', classPattern: '**/classes', sourcePattern: '**/src/main/java'
+                }
             }
         }
 
