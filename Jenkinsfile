@@ -52,7 +52,21 @@ pipeline {
     }
 
     post {
-        always {
-        }
+    success {
+        echo 'The pipeline has completed successfully.'
     }
+    failure {
+        echo 'The pipeline failed.'
+    }
+    always {
+        echo 'This will always run regardless of the build result.'
+    }
+    unstable {
+        echo 'The build is unstable.'
+    }
+    changed {
+        echo 'The build result has changed.'
+    }
+}
+
 }
